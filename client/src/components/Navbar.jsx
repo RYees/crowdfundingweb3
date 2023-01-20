@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 
-//import { useStateContext } from '../context';
+import { useStateContext } from '../context';
 import { CustomButton } from './';
 import { logo, menu, search, thirdweb } from '../assets';
 import { navlinks } from '../constants';
 
 const Navbar = () => {
-  const addr = '0xabc';
+ // const addr = '0xabc';
   const navigate = useNavigate();
   const [isActive, setIsActive] = useState('dashboard');
   const [toggleDrawer, setToggleDrawer] = useState(false);
- // const { connect, address } = useStateContext();
+  const { connect, address } = useStateContext();
 
    return (
     <div className="flex md:flex-row flex-col-reverse justify-between mb-[35px] gap-6">
@@ -26,11 +26,11 @@ const Navbar = () => {
       <div className="sm:flex hidden flex-row justify-end gap-4">
         <CustomButton 
           btnType="button"
-          title={addr ? 'Create a campaign' : 'Connect'}
-          styles={addr ? 'bg-[#1dc071]' : 'bg-[#8c6dfd]'}
+          title={address ? 'Create a campaign' : 'Connect'}
+          styles={address ? 'bg-[#1dc071]' : 'bg-[#8c6dfd]'}
           handleClick={() => {
-            if(addr) navigate('create-campaign')
-            else 'connect()'
+            if(address) navigate('create-campaign')
+            else connect()
           }}
         />
 
@@ -81,11 +81,11 @@ const Navbar = () => {
             <div className="flex mx-4">
             <CustomButton 
               btnType="button"
-              title={addr ? 'Create a campaign' : 'Connect'}
-              styles={addr ? 'bg-[#1dc071]' : 'bg-[#8c6dfd]'}
+              title={address ? 'Create a campaign' : 'Connect'}
+              styles={address ? 'bg-[#1dc071]' : 'bg-[#8c6dfd]'}
               handleClick={() => {
                 if(addr) navigate('create-campaign')
-                else 'connect()'
+                else connect()
               }}
             />
             </div>
