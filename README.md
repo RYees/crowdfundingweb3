@@ -22,3 +22,13 @@ Steps to do the project:
    * Testing and deploying the contract on ethereum blockchain
 * Building frontend web dapp
    * Designing and coding the user interface with reactjs
+
+## Installation
+To clone the repository use the below link:
+---
+    https://github.com/RYees/crowdfundingweb3.git
+    
+    
+To run the repository first run the following:
+---
+    npm run dev
