@@ -29,6 +29,7 @@ To clone the repository use the below link:
     https://github.com/RYees/crowdfundingweb3.git
     
     
-To run the repository first run the following:
+Run the client folder from the repository with the following:
 ---
+    npm install
     npm run dev
